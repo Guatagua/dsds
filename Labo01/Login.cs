@@ -31,7 +31,6 @@ namespace Labo01
         private void Form1_Load(object sender, EventArgs e)
         {
             bt_Connect.ForeColor = Color.DarkRed;
-            bt_Exit.ForeColor = Color.DarkRed;
             optEtudiant.Checked = true;
             if (xLoginChecked == 2) optAdmin.Checked = true;
         }
@@ -39,12 +38,6 @@ namespace Labo01
         private void bt_Connect_Click(object sender, EventArgs e)
         {
 
-            string Login, Pwd;
-            Login = txt_Login.Text;
-            Pwd = txt_PWD.Text;
-            if(!string.IsNullOrEmpty(Login) && !string.IsNullOrEmpty(Pwd))
-            {
-                ClLogin login = new ClLogin();
 
                 if (optAdmin.Checked && login.AuthentificationEtudiant(Login, Pwd))
                 {
@@ -69,12 +62,7 @@ namespace Labo01
 
         private void bt_Connect_MouseHover(object sender, EventArgs e)
         {
-            bt_Connect.ForeColor = Color.DarkBlue; 
-        }
 
-        private void bt_Connect_MouseLeave(object sender, EventArgs e)
-        {
-            bt_Connect.ForeColor = Color.DarkRed;
         }
 
         private void bt_Exit_MouseHover(object sender, EventArgs e)
@@ -82,9 +70,6 @@ namespace Labo01
             bt_Exit.ForeColor = Color.DarkBlue;
         }
 
-        private void bt_Exit_DragLeave(object sender, EventArgs e)
-        {
-            bt_Exit.ForeColor = Color.DarkRed;
         }
     }
 }
