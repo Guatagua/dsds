@@ -35,11 +35,10 @@
             this.bt_Exit = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panelheader = new System.Windows.Forms.Panel();
-            this.mainpanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.mainpanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panelheader.SuspendLayout();
+            this.mainpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // bt_Etudiant
@@ -117,24 +116,6 @@
             this.panel1.Size = new System.Drawing.Size(200, 550);
             this.panel1.TabIndex = 6;
             // 
-            // panelheader
-            // 
-            this.panelheader.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panelheader.Controls.Add(this.label1);
-            this.panelheader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelheader.Location = new System.Drawing.Point(200, 0);
-            this.panelheader.Name = "panelheader";
-            this.panelheader.Size = new System.Drawing.Size(950, 30);
-            this.panelheader.TabIndex = 7;
-            // 
-            // mainpanel
-            // 
-            this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainpanel.Location = new System.Drawing.Point(200, 0);
-            this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(950, 550);
-            this.mainpanel.TabIndex = 8;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -145,12 +126,20 @@
             this.label1.Text = "X";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // mainpanel
+            // 
+            this.mainpanel.Controls.Add(this.label1);
+            this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainpanel.Location = new System.Drawing.Point(200, 0);
+            this.mainpanel.Name = "mainpanel";
+            this.mainpanel.Size = new System.Drawing.Size(950, 550);
+            this.mainpanel.TabIndex = 8;
+            // 
             // MenuPrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 550);
-            this.Controls.Add(this.panelheader);
             this.Controls.Add(this.mainpanel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -158,8 +147,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principale";
             this.panel1.ResumeLayout(false);
-            this.panelheader.ResumeLayout(false);
-            this.panelheader.PerformLayout();
+            this.mainpanel.ResumeLayout(false);
+            this.mainpanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -173,7 +162,6 @@
         private System.Windows.Forms.Button bt_Exit;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panelheader;
         private System.Windows.Forms.Panel mainpanel;
         private System.Windows.Forms.Label label1;
     }

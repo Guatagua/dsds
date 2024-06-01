@@ -31,11 +31,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.panelheader = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.mainpanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panelheader.SuspendLayout();
+            this.mainpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -70,17 +69,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // panelheader
-            // 
-            this.panelheader.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panelheader.Controls.Add(this.label1);
-            this.panelheader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelheader.Location = new System.Drawing.Point(200, 0);
-            this.panelheader.Name = "panelheader";
-            this.panelheader.Size = new System.Drawing.Size(950, 30);
-            this.panelheader.TabIndex = 1;
-            this.panelheader.Paint += new System.Windows.Forms.PaintEventHandler(this.panelheader_Paint);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -93,6 +81,7 @@
             // 
             // mainpanel
             // 
+            this.mainpanel.Controls.Add(this.label1);
             this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainpanel.Location = new System.Drawing.Point(200, 0);
             this.mainpanel.Name = "mainpanel";
@@ -105,7 +94,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 550);
-            this.Controls.Add(this.panelheader);
             this.Controls.Add(this.mainpanel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -114,8 +102,8 @@
             this.Text = "panel_etudiant";
             this.Load += new System.EventHandler(this.panel_etudiant_Load);
             this.panel1.ResumeLayout(false);
-            this.panelheader.ResumeLayout(false);
-            this.panelheader.PerformLayout();
+            this.mainpanel.ResumeLayout(false);
+            this.mainpanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -123,7 +111,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panelheader;
         private System.Windows.Forms.Panel mainpanel;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;

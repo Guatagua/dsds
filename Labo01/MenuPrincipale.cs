@@ -16,7 +16,7 @@ namespace Labo01
         {
             InitializeComponent();
         }
-        public void loadformmenuprincipale(object form)
+        public void loadforminpanelmenuprincipale(object form)
         {
             if (this.mainpanel.Controls.Count > 0)
                 this.mainpanel.Controls.RemoveAt(0);
@@ -30,7 +30,7 @@ namespace Labo01
 
         private void bt_Specialite_Click(object sender, EventArgs e)
         {
-            loadformmenuprincipale(new frmSpecialite());
+            loadforminpanelmenuprincipale(new frmSpecialite());
         }
 
         private void bt_Exit_Click(object sender, EventArgs e)
@@ -40,22 +40,22 @@ namespace Labo01
 
         private void bt_Etudiant_Click(object sender, EventArgs e)
         {
-            loadformmenuprincipale(new GestionEtudiant());
+            loadforminpanelmenuprincipale(new GestionEtudiant());
         }
 
         private void bt_Groupe_Click(object sender, EventArgs e)
         {
-            loadformmenuprincipale(new frmGroupe());
+            loadforminpanelmenuprincipale(new frmGroupe());
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            loadformmenuprincipale(new Traiter());
+            loadforminpanelmenuprincipale(new Traiter());
         }
 
         private void bt_Matiere_Click(object sender, EventArgs e)
         {
-            loadformmenuprincipale(new Matieres());
+            loadforminpanelmenuprincipale(new Matieres());
         }
 
         private void label1_Click(object sender, EventArgs e)
